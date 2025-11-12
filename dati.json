@@ -4,7 +4,7 @@
     "cognome": "Bianchi",
     "eta": 18,
     "nazionalita": "Italiana",
-    "scuola": "5A"
+    "scuola": "1A"
   },
   {
     "nome": "Giulia",
@@ -44,14 +44,14 @@
   {
     "nome": "Francesco",
     "cognome": "Moretti",
-    "eta": 19,
+    "eta": 50,
     "nazionalita": "Italiana",
     "scuola": "5C"
   },
   {
     "nome": "Elena",
     "cognome": "De Luca",
-    "eta": 18,
+    "eta": 30,
     "nazionalita": "Italiana",
     "scuola": "5B"
   }
