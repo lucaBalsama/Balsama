@@ -2,7 +2,7 @@
   {
     "nome": "Luca",
     "cognome": "Bianchi",
-    "eta": 18,
+    "eta": 14,
     "nazionalita": "Italiana",
     "scuola": "1A"
   },
@@ -46,14 +46,14 @@
     "cognome": "Moretti",
     "eta": 50,
     "nazionalita": "Italiana",
-    "scuola": "5C"
+    "scuola": "Diploma"
   },
   {
     "nome": "Elena",
     "cognome": "De Luca",
     "eta": 30,
     "nazionalita": "Italiana",
-    "scuola": "5B"
+    "scuola": "Laurea magistrale"
   }
 ]
 
