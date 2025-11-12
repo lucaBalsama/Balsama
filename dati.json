@@ -1,0 +1,50 @@
+[
+  {
+    "Nome": "Luca",
+    "Cognome": "Bianchi",
+    "Classe": "5A",
+    "Nascita": "2007-03-15"
+  },
+  {
+    "Nome": "Giulia",
+    "Cognome": "Rossi",
+    "Classe": "5A",
+    "Nascita": "2007-07-02"
+  },
+  {
+    "Nome": "Matteo",
+    "Cognome": "Ferrari",
+    "Classe": "5B",
+    "Nascita": "2006-11-21"
+  },
+  {
+    "Nome": "Chiara",
+    "Cognome": "Romano",
+    "Classe": "5B",
+    "Nascita": "2007-02-08"
+  },
+  {
+    "Nome": "Andrea",
+    "Cognome": "Greco",
+    "Classe": "5A",
+    "Nascita": "2006-09-30"
+  },
+  {
+    "Nome": "Sara",
+    "Cognome": "Conti",
+    "Classe": "5C",
+    "Nascita": "2007-05-11"
+  },
+  {
+    "Nome": "Francesco",
+    "Cognome": "Moretti",
+    "Classe": "5C",
+    "Nascita": "2006-12-03"
+  },
+  {
+    "Nome": "Elena",
+    "Cognome": "De Luca",
+    "Classe": "5B",
+    "Nascita": "2007-01-26"
+  }
+]
