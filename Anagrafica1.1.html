@@ -1,0 +1,208 @@
+<!DOCTYPE html> 
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anagrafica</title>
+
+<style>
+:root {
+  --colore-primario: #2563eb;
+  --colore-secondario: #1e40af;
+  --colore-sfondo: #f5f7fb;
+  --colore-testo: #222;
+  --colore-bordo: #e1e4eb;
+}
+
+body {
+  font-family: "Inter", "Roboto", sans-serif;
+  background: var(--colore-sfondo);
+  color: var(--colore-testo);
+  margin: 0;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: var(--colore-primario);
+  margin: 40px 0 25px 0;
+  text-align: center;
+  font-weight: 700;
+}
+
+table {
+  border-collapse: collapse;
+  width: 95%;
+  max-width: 1000px;
+  background: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 40px;
+  transition: all 0.3s ease;
+}
+
+th, td {
+  text-align: left;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--colore-bordo);
+}
+
+th {
+  background: var(--colore-primario);
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.4px;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #eff6ff;
+  transition: background 0.3s ease;
+}
+
+td {
+  font-size: 0.95rem;
+}
+
+.bottone {
+  display: inline-block;
+  margin: 20px auto 30px auto;
+  padding: 12px 28px;
+  background: var(--colore-primario);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+  transition: all 0.25s ease-in-out;
+}
+
+.bottone:hover {
+  background: var(--colore-secondario);
+  box-shadow: 0 5px 15px rgba(37, 99, 235, 0.4);
+  transform: translateY(-2px);
+}
+
+.bottone:active {
+  transform: scale(0.97);
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.3);
+}
+
+@media (max-width: 700px) {
+  table {
+    font-size: 0.85rem;
+  }
+  th, td {
+    padding: 10px;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+  .bottone {
+    font-size: 0.9rem;
+    padding: 10px 22px;
+  }
+}
+</style>
+</head>
+
+<body onload="loadDoc()">
+   <h2>Tabella Individui Anagrafica 1.1</h2>
+   <button class="bottone" onclick="generaSecondaTabella()">Genera con controlli</button>
+   <table id="demo"></table>
+
+   <h2>Analisi Dati</h2>
+   <div id="secondaTabella"></div>
+
+<script>
+let myObj = []; 
+
+let xmlhttp = new XMLHttpRequest();
+xmlhttp.open("GET", "https://raw.githubusercontent.com/lucaBalsama/Balsama/refs/heads/main/dati.json", true);
+xmlhttp.send();
+
+xmlhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    myObj = JSON.parse(this.responseText);
+    let stampa = "<table class='tabellaAnagrafica'>" +
+                 "<tr><th>Nome</th><th>Cognome</th><th>Età</th><th>Nazionalità</th><th>Classe</th></tr>";
+
+    for (let y in myObj) {
+      stampa += "<tr>" +
+                  "<td>" + myObj[y].nome + "</td>" +
+                  "<td>" + myObj[y].cognome + "</td>" +
+                  "<td>" + myObj[y].eta + "</td>" +
+                  "<td>" + myObj[y].nazionalita + "</td>" +
+                  "<td>" + myObj[y].scuola + "</td>" +
+                "</tr>";
+    }
+
+    stampa += "</table>";
+    document.getElementById("demo").innerHTML = stampa;
+  }
+};
+
+function generaSecondaTabella() {
+  let stampa2 = "<table class='tabellaControlli'>" +
+                "<tr><th>Nome</th><th>Cognome</th><th>Età</th><th>Nazionalità</th><th>Classe</th><th>Status</th><th>Generazione</th></tr>";
+
+  for (let y in myObj) {
+    let eta = parseInt(myObj[y].eta);
+
+    let status;
+    if (eta >= 18) {
+      status = "Maggiorenne";
+    } else {
+      status = "Minorenne";
+    }
+
+let generazione = "";
+if (eta >= 98 && eta <= 124) {
+  generazione = "Greatest Generation";
+} else if (eta >= 80 && eta <= 97) {
+  generazione = "Generazione Silenziosa";
+} else if (eta >= 61 && eta <= 79) {
+  generazione = "Baby Boomers";
+} else if (eta >= 45 && eta <= 60) {
+  generazione = "Generazione X";
+} else if (eta >= 29 && eta <= 44) {
+  generazione = "Millennials";
+} else if (eta >= 13 && eta <= 28) {
+  generazione = "Generazione Z";
+} else if (eta >= 0 && eta <= 12) {
+  generazione = "Generazione Alpha";
+} else {
+  generazione = "Non si può determinare";
+}
+    
+    stampa2 += "<tr>" +
+                 "<td>" + myObj[y].nome + "</td>" +
+                 "<td>" + myObj[y].cognome + "</td>" +
+                 "<td>" + eta + "</td>" +
+                 "<td>" + myObj[y].nazionalita + "</td>" +
+                 "<td>" + myObj[y].scuola + "</td>" +
+                 "<td>" + status + "</td>" +
+                 "<td>" + generazione + "</td>" +
+               "</tr>";
+  }
+
+  stampa2 += "</table>";
+  document.getElementById("secondaTabella").innerHTML = stampa2;
+}
+</script>
+</body>
+</html>
