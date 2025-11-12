@@ -1,50 +1,59 @@
 [
   {
-    "Nome": "Luca",
-    "Cognome": "Bianchi",
-    "Classe": "5A",
-    "Nascita": "2007-03-15"
+    "nome": "Luca",
+    "cognome": "Bianchi",
+    "eta": 18,
+    "nazionalita": "Italiana",
+    "scuola": "5A"
   },
   {
-    "Nome": "Giulia",
-    "Cognome": "Rossi",
-    "Classe": "5A",
-    "Nascita": "2007-07-02"
+    "nome": "Giulia",
+    "cognome": "Rossi",
+    "eta": 18,
+    "nazionalita": "Italiana",
+    "scuola": "5A"
   },
   {
-    "Nome": "Matteo",
-    "Cognome": "Ferrari",
-    "Classe": "5B",
-    "Nascita": "2006-11-21"
+    "nome": "Matteo",
+    "cognome": "Ferrari",
+    "eta": 19,
+    "nazionalita": "Italiana",
+    "scuola": "5B"
   },
   {
-    "Nome": "Chiara",
-    "Cognome": "Romano",
-    "Classe": "5B",
-    "Nascita": "2007-02-08"
+    "nome": "Chiara",
+    "cognome": "Romano",
+    "eta": 18,
+    "nazionalita": "Italiana",
+    "scuola": "5B"
   },
   {
-    "Nome": "Andrea",
-    "Cognome": "Greco",
-    "Classe": "5A",
-    "Nascita": "2006-09-30"
+    "nome": "Andrea",
+    "cognome": "Greco",
+    "eta": 19,
+    "nazionalita": "Italiana",
+    "scuola": "5A"
   },
   {
-    "Nome": "Sara",
-    "Cognome": "Conti",
-    "Classe": "5C",
-    "Nascita": "2007-05-11"
+    "nome": "Sara",
+    "cognome": "Conti",
+    "eta": 18,
+    "nazionalita": "Italiana",
+    "scuola": "5C"
   },
   {
-    "Nome": "Francesco",
-    "Cognome": "Moretti",
-    "Classe": "5C",
-    "Nascita": "2006-12-03"
+    "nome": "Francesco",
+    "cognome": "Moretti",
+    "eta": 19,
+    "nazionalita": "Italiana",
+    "scuola": "5C"
   },
   {
-    "Nome": "Elena",
-    "Cognome": "De Luca",
-    "Classe": "5B",
-    "Nascita": "2007-01-26"
+    "nome": "Elena",
+    "cognome": "De Luca",
+    "eta": 18,
+    "nazionalita": "Italiana",
+    "scuola": "5B"
   }
 ]
+
